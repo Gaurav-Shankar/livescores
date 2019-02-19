@@ -1,0 +1,19 @@
+{
+  "name": "livescores",
+  "version": "1.0.0",
+  "description": "CLI app to show live scores in terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "livescores"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/grv19/livescores.git"
+  },
+  "author": "Gaurav Shankar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grv19/livescores/issues"
+  },
+  "homepage": "https://github.com/grv19/livescores#readme"
+}
