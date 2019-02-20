@@ -46,11 +46,7 @@ var c = new Crawler({
     }
 });
 
-var listFunction = () => {
-    console.log("\n");
-    console.log(clc.redBright("Cricket News coming soon. 😢"))
-  }
 
 c.queue('https://www.cricbuzz.com/cricket-match/live-scores');
 
-module.exports = {c,listFunction};
+module.exports = {c};

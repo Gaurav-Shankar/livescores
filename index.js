@@ -21,8 +21,9 @@ program
 
 program
     .command("sch")
-    .action(()=>{
-        listFunction
+    .action(function(){
+        console.log("\n");
+        console.log(clc.redBright("Cricket Schedule coming soon. 😢"))
     });
 
 program
