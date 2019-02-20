@@ -19,26 +19,26 @@ var c = new Crawler({
                 Heading.children[0].name === "h2" ? matchHeaders.push(Heading.children[0].attribs.title) : null
                 }
             });
-            scoreCard = $(".cb-lv-main").first().find(".cb-scr-wll-chvrn").children().first().text();
-            scoreCard = scoreCard.split("•")
-            liveCommentary = $(".cb-lv-main").first().find(".cb-scr-wll-chvrn").children(".cb-text-live").text();
-            matchDecision = $(".cb-lv-main").first().find(".cb-scr-wll-chvrn").children(".cb-text-complete").text();
+            scores = $(".cb-lv-main").first().find(".cb-scr-wll-chvrn").children().first().text();
+            scores = scores.split("•")
+            live = $(".cb-lv-main").first().find(".cb-scr-wll-chvrn").children(".cb-text-live").text();
+            matchRes = $(".cb-lv-main").first().find(".cb-scr-wll-chvrn").children(".cb-text-complete").text();
             console.log("\n")
-            console.log(clc.greenBright("LIVE 🏏  SCORES  and SCHEDULE"))
+            console.log(clc.greenBright("LIVE   🏏  SCORES"))
                 console.log("\n")
-                console.log(clc.redBright(matchHeaders[0]))
-                if(!scoreCard[0] & !scoreCard[1]){
-                    console.log(("🍋  "+clc.blackBright("Match not Started Yet !!")+" 🍋"));
+                console.log(clc.magenta	(matchHeaders[0]))
+                if(!scores[0] & !scores[1]){
+                    console.log((clc.blackBright("Match has not Started Yet !!")));
                 }
                 else{
-                    console.log(clc.cyanBright(scoreCard[0]));
-                    console.log(clc.cyanBright(scoreCard[1].trim()));
+                    console.log(clc.cyanBright(scores[0]));
+                    console.log(clc.cyanBright(scores[1].trim()));
                 }
-                if(liveCommentary){
-                    console.log(clc.yellowBright(liveCommentary));
+                if(live){
+                    console.log(clc.yellowBright(live));
                 }
-                if(matchDecision){
-                    console.log("😸 " +clc.greenBright(matchDecision)+" 😸");
+                if(matchRes){
+                    console.log(clc.greenBright(matchRes));
                 }
             }
             console.log("\n");
@@ -48,5 +48,4 @@ var c = new Crawler({
 
 
 c.queue('https://www.cricbuzz.com/cricket-match/live-scores');
-
 module.exports = {c};
