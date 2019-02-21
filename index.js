@@ -6,7 +6,7 @@ var clc = require("cli-color");
 
 
 program
-    .version('1.0.0')
+    .version('1.0.1')
     .option('-feed', 'Get Complete Cricket Feed')
     .option('-news', 'Get Latest Cricket News')
 
