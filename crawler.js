@@ -1,5 +1,38 @@
 var Crawler = require("crawler");
 var clc = require("cli-color");
+var $;
+var f = new Crawler({
+    maxConnections: 10,
+    callback: function(error, res, done) {
+        if (error) {
+            console.log(error);
+        } else {
+            $ = res.$;
+            var _parent = $('.cb-lv-main');
+            var matches = _parent.text();
+            matches = matches.split("News")
+            console.log(clc.greenBright("LIVE   🏏  SCORES AND SCHEDULES"))
+            for (i = 0; i < matches.length - 1; i++) {
+                console.log("\n");
+                var individualMatchDetai = matches[i].split(",");
+                for (j = 0; j < individualMatchDetai.length; j++) {
+                    if (individualMatchDetai[j].includes("      ")) {
+                        console.log(clc.cyanBright(individualMatchDetai[j].split("      ")[0]));
+                    } else if (individualMatchDetai[j].includes("Read Preview  Match")) {
+                        console.log(clc.yellowBright(individualMatchDetai[j].split("Read Preview  Match")[0]));
+                        console.log(" Match yet to start")
+                    } else if (j == 0) {
+                        console.log(clc.redBright(individualMatchDetai[j] + "\n---------------------------------------------------------"));
+                    } else {
+                        console.log(clc.yellowBright(individualMatchDetai[j]));
+                    }
+                }
+                console.log("\n");
+            }
+            done();
+        }
+    }
+});
 
 var c = new Crawler({
     maxConnections : 10,
@@ -46,6 +79,10 @@ var c = new Crawler({
     }
 });
 
-
+f.queue('https://www.cricbuzz.com/cricket-match/live-scores');
 c.queue('https://www.cricbuzz.com/cricket-match/live-scores');
-module.exports = {c};
+
+module.exports = {
+    f,
+    c
+};
