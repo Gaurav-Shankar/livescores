@@ -1,6 +1,6 @@
 {
   "name": "livescores",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Command line app to show live cricket scores, schedule and news in terminal",
   "main": "index.js",
   "scripts": {
