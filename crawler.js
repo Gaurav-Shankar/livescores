@@ -1,4 +1,3 @@
-'use strict';
 var Crawler = require("crawler");
 var clc = require("cli-color");
 var $;
