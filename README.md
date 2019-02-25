@@ -38,7 +38,7 @@ You must have the below dependencies before you start working on it.
 
     Node.js
     npm
-    yarm
+    yarn
 
 Once you've met the dependencies, run this command to install
 
