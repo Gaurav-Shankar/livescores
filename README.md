@@ -1,5 +1,7 @@
 ![](https://i.pinimg.com/564x/91/94/24/9194247dff2f4a072797f5b366f14efa.jpg?b=t)
 #
+[![star this repo](http://githubbadges.com/star.svg?user=grv19&repo=livescores&style=default)](https://github.com/grv19/livescores)
+[![fork this repo](http://githubbadges.com/fork.svg?user=grv19&repo=livescores&style=default)](https://github.com/grv19/livescores/fork)
 # 🏏 livescores 🏏
 
 livescores is a command line application to view the live cricket scores right on your terminal. While we await the prime cricket season coming up with IPL and WC, why switch to a browser to view live scores when you can view it right on your terminal.🤓
