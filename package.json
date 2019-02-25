@@ -28,5 +28,5 @@
   "preferGlobal": true,
   "bin": {
     "livescores": "index.js"
-}
+  }
 }
