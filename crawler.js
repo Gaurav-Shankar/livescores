@@ -65,7 +65,7 @@ var c = new Crawler({
                 }
                 else{
                     console.log(clc.cyanBright(scores[0]));
-                    console.log(clc.cyanBright(scores[1].trim()));
+                    console.log(clc.cyanBright(scores[1]));
                 }
                 if(live){
                     console.log(clc.yellowBright(live));
