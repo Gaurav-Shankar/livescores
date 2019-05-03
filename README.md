@@ -1,9 +1,5 @@
 ![](https://i.pinimg.com/564x/91/94/24/9194247dff2f4a072797f5b366f14efa.jpg?b=t)
 #
-[![star this repo](http://githubbadges.com/star.svg?user=grv19&repo=livescores&style=default)](https://github.com/grv19/livescores)
-[![fork this repo](http://githubbadges.com/fork.svg?user=grv19&repo=livescores&style=default)](https://github.com/grv19/livescores/fork)
-![](https://travis-ci.org/grv19/livescores.svg?branch=master)
-
 [![NPM](https://nodei.co/npm/livescores.png)](https://nodei.co/npm/livescores/)
 
 ![](https://img.shields.io/npm/dm/livescores.svg)
