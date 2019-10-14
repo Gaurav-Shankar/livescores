@@ -10,21 +10,33 @@ var f = new Crawler({
             $ = res.$;
             var _parent = $('.cb-lv-main');
             var matches = _parent.text();
-            matches = matches.split("News")
+            matches = matches.split("News");
             console.log(clc.greenBright("LIVE   🏏  SCORES AND SCHEDULES"))
             for (i = 0; i < matches.length - 1; i++) {
                 console.log("\n");
-                var individualMatchDetai = matches[i].split(",");
-                for (j = 0; j < individualMatchDetai.length; j++) {
-                    if (individualMatchDetai[j].includes("      ")) {
-                        console.log(clc.cyanBright(individualMatchDetai[j].split("      ")[0]));
-                    } else if (individualMatchDetai[j].includes("Read Preview  Match")) {
-                        console.log(clc.yellowBright(individualMatchDetai[j].split("Read Preview  Match")[0]));
+                var individualMatchDetail = matches[i].split(",");
+                var matchCity;
+                var locationIndex = individualMatchDetail.findIndex(matchDetail => matchDetail.includes(' at '));
+                var cityIndex = locationIndex + 1;
+                if(individualMatchDetail[cityIndex].includes('Read Preview')) {
+                    matchCity = individualMatchDetail[cityIndex].split('Read Preview')[0];
+                }
+                else {
+                    matchCity = individualMatchDetail[cityIndex].split('   ')[0];
+                }
+                individualMatchDetail[cityIndex] = individualMatchDetail[cityIndex].replace(matchCity, '');
+                individualMatchDetail[locationIndex] += `,${matchCity}`;
+
+                for (j = 0; j < individualMatchDetail.length; j++) {
+                    individualMatchDetail[j].includes()
+                    if (individualMatchDetail[j].includes("      ")) {
+                        console.log(clc.cyanBright(individualMatchDetail[j].split("      ")[0]));
+                    } else if (individualMatchDetail[j].includes("Read Preview  Match")) {
                         console.log(" Match yet to start")
                     } else if (j == 0) {
-                        console.log(clc.redBright(individualMatchDetai[j] + "\n---------------------------------------------------------"));
+                        console.log(clc.redBright(individualMatchDetail[j] + "\n---------------------------------------------------------"));
                     } else {
-                        console.log(clc.yellowBright(individualMatchDetai[j]));
+                        console.log(clc.yellowBright(individualMatchDetail[j]));
                     }
                 }
                 console.log("\n");
